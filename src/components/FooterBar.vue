@@ -1,5 +1,6 @@
 <template>
   <div>
+      <hr>
       <footer class="footer fuzzy-footer">
           Footer content
       </footer>
@@ -18,7 +19,7 @@
 
 <style>
 .fuzzy-footer {
-    background-color: dimgrey
+    /* background-color: dimgrey */
 }
 
 </style>
