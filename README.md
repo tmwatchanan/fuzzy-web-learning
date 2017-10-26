@@ -1,4 +1,5 @@
 # fuzzy-web-learning
+<<<<<<< HEAD
 
 > A Vue.js project
 
@@ -19,3 +20,6 @@ npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+=======
+A interactive web learning system for teaching fuzzy logic
+>>>>>>> e79e0254cdc83f954d1405e6fe152cedaa5a6c58
