@@ -1,5 +1,5 @@
 import Home from '@/components/Home'
-import Learn from '../components/Learn'
+import Learn from '@/components/Learn'
 import Lab from '@/components/Lab'
 import Assignments from '@/components/Assignments'
 
@@ -10,22 +10,22 @@ export const routes = [
   },
   {
     path: '',
-    name: 'Home',
-    component: Home
+    component: Home,
+    name: 'Home'
   },
   {
     path: '/learn',
-    name: 'LearnPath',
-    components: Learn
+    component: Learn,
+    name: 'Learn'
   },
   {
     path: '/lab',
-    name: 'lab',
-    components: Lab
+    component: Lab,
+    name: 'Lab'
   },
   {
     path: '/assignments',
-    name: 'assignments',
-    components: Assignments
+    component: Assignments,
+    name: 'Assignments'
   }
 ]
