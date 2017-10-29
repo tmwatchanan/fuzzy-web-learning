@@ -13,6 +13,11 @@ const router = new VueRouter({
   mode: 'history'
 })
 
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title
+  next()
+})
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
