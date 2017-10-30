@@ -18,7 +18,7 @@ export const routes = [{
   },
   {
     path: '/learn',
-    component: Learn,
+    component: HeapParadox,
     name: 'Learn',
     meta: {
       title: 'Fuzzy Logic : Learn'
