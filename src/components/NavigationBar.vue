@@ -24,6 +24,9 @@
               <!-- <a class="nav-link" href="#">Learn</a> -->
             </li>
             <li class="nav-item">
+              <router-link tag="a" :to="ToHeapParadox" class="nav-link">HeapParadox</router-link>
+            </li>
+            <li class="nav-item">
               <router-link tag="a" :to="ToLab" class="nav-link">Lab</router-link>
             </li>
             <li class="nav-item dropdown">
@@ -57,6 +60,9 @@
             },
             ToLearn: {
                 name: 'Learn',
+                heapParadox: {
+                  name: 'HeapParadox'
+                }
                 // params: {
                 //     id: this.$route.params.id
                 // },
@@ -71,6 +77,9 @@
             },
             ToAssignments: {
               name: 'Assignments'
+            },
+            ToHeapParadox: {
+              name: 'HeapParadox'
             }
         }
     }
