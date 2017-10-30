@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <nav-bar/>
-    <router-view/>
+    <router-view id="main"/>
     <footer-bar/>
   </div>
 </template>
@@ -26,5 +26,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+#main {
+  margin: 0% 5% 0% 5%;
+  text-align: left;
 }
 </style>
