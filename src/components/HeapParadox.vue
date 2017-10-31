@@ -12,7 +12,7 @@
 <script>
     export default {
         mounted() {
-            window.addEventListener("load", function(event) {
+            // window.addEventListener("load", function(event) {
 
                 var canvas = document.getElementById('hail');
                 var width = window.innerWidth,
@@ -40,7 +40,7 @@
                         options: {
                             width: window.innerWidth,
                             height: 760,
-                            wireframes: true,
+                            wireframes: false,
                             showAngleIndicators: true
                         }
                     }
@@ -103,7 +103,7 @@
 
                 // run the engine
                 Engine.run(engine);
-            });
+            // });
 
             var data = [{
                 x: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],

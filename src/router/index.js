@@ -3,6 +3,8 @@ import Learn from '@/components/Learn'
 import Lab from '@/components/Lab'
 import Assignments from '@/components/Assignments'
 import HeapParadox from '@/components/HeapParadox'
+import Auth from '@/components/Auth'
+import AuthSuccess from '@/components/AuthSuccess'
 
 export const routes = [{
     path: '*',
@@ -46,6 +48,22 @@ export const routes = [{
     name: 'HeapParadox',
     meta: {
       title: 'Fuzzy Logic : Heap Paradox'
+    }
+  },
+  {
+    path: '/auth',
+    component: Auth,
+    name: 'Auth',
+    meta: {
+      title: 'Fuzzy Logic : Authentication'
+    }
+  },
+  {
+    path: '/success',
+    component: AuthSuccess,
+    name: 'AuthSuccess',
+    meta: {
+      title: 'Fuzzy Logic : Successfully Authenticated'
     }
   }
 ]
