@@ -1,27 +1,38 @@
-<template>
-    <div>
-        <div style="display: inline-block;">
-            <div align="center">
-                <h1 id="ballNum" align="center"></h1>
-                <button id="add_button" class="btn">Add Ball</button>
-                <button id="remove_button" class="btn">Remove Ball</button>
-            </div>
-            <canvas id="canvas"></canvas>
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <script src="./matter.js"></script>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+        }
+
+        canvas {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+
+        button {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="display: inline-block;">
+        <div align="center">
+            <h1 id="ballNum" align="center"></h1>
+            <button onclick="add_ball()">Add Ball</button>
+            <button onclick="remove_ball()">Remove Ball</button>
         </div>
+        <canvas id="canvas"></canvas>
     </div>
-</template>
 
-
-<script>
-    import stoneSmall from '../assets/stone-small.png';
-    export default {
-        data: {
-            
-        },
-        mounted() {
-            // window.addEventListener("load", function(event) {
-
-
+    <script>
         var Engine = Matter.Engine,
             Render = Matter.Render,
             Runner = Matter.Runner,
@@ -103,7 +114,7 @@
                     friction: 1,
                     render: {
                         sprite: {
-                            texture: stoneSmall
+                            texture: './stone-small.png'
                         }
                     }
                 }));
@@ -115,7 +126,7 @@
 
         init_ball();
 
-        var add_ball = function() {
+        function add_ball() {
             if (number_of_ball < max_ball) {
                 ball.push(Bodies.circle(400 - shift_left, 300, 46, {
                     density: 1,
@@ -124,7 +135,7 @@
                     friction: 1,
                     render: {
                         sprite: {
-                            texture: stoneSmall
+                            texture: './stone-small.png'
                         }
                     }
                 }));
@@ -132,39 +143,15 @@
                 number_of_ball++;
                 document.getElementById('ballNum').innerHTML = "Ball(s) : " + number_of_ball;
             }
-        };
+        }
 
-        var remove_ball = function() {
+        function remove_ball() {
             Matter.Composite.remove(world, ball[0]);
             ball.shift();
             number_of_ball--;
             document.getElementById('ballNum').innerHTML = "Ball(s) : " + number_of_ball;
-        };
+        }
+    </script>
+</body>
 
-        // element.attachEvent('onclick', myFunctionReference);
-        var addButton = document.getElementById("add_button");
-        addButton.addEventListener('click', add_ball , false);
-        var removeButton = document.getElementById("remove_button");
-        removeButton.addEventListener('click', remove_ball , false);
-    }
-   }
-</script>
-
-<style>
-    body {
-        background-color: white;
-        color: black;
-    }
-
-    canvas {
-        position: relative;
-        left: 0;
-        top: 0;
-        z-index: -1;
-    }
-
-    button {
-        margin: 10px;
-    }
-</style>
-
+</html>
